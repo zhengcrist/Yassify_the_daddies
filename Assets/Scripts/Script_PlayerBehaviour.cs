@@ -8,7 +8,7 @@ public class Script_PlayerBehaviour : MonoBehaviour
 {
 
     [SerializeField] public float movingRangeX, movingRangeY;
-    [SerializeField] private float PlayerX, PlayerY;
+    private float PlayerX, PlayerY;
 
     // [SerializeField] private float moveSpeed;
 

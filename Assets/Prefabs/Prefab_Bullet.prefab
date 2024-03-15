@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 8363154609518221108}
   m_Layer: 0
   m_Name: Prefab_Bullet
-  m_TagString: Untagged
+  m_TagString: Bullet
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -133,3 +133,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7f58ef8b9511615489b83812e34173af, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  StartTime: 0
+  CurrentTime: 2
+  moveSpeed: 20.2
+  scaleChange: {x: 0.001, y: 0.001, z: 0.001}
+  boolScaleChange: 1
