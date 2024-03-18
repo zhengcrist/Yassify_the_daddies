@@ -2,10 +2,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Script_Cible1 : MonoBehaviour
+public class Script_CibleInno : MonoBehaviour
 {
     public Script_Score scriptScore;
-
     [SerializeField] private Transform[] _waypoints; // start the waypoints array
     [SerializeField] private float[] _speed; // speeds of the target to go to the next waypoint[same index]
 
@@ -52,9 +51,16 @@ public class Script_Cible1 : MonoBehaviour
         Debug.Log("Destroy Collision");
         if (collision.gameObject.CompareTag("Bullet"))
         {
-            scriptScore.Score = scriptScore.Score + 1; // Rajoute 1 a la variable score ( dans le script score)
             Destroy(collision.gameObject);
-            Destroy(this.gameObject);
+
+            if (scriptScore.Score > 0)
+            {
+                scriptScore.Score = scriptScore.Score - 250; // Enleve 1 a la variable score ( dans le script score) que si on as des points 
+            }
         }
+    }
+    void Spawn()
+    {
+
     }
 }
