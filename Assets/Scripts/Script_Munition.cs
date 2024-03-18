@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class Script_Munition : MonoBehaviour
@@ -23,7 +24,7 @@ public class Script_Munition : MonoBehaviour
 
         // setting sprite according to bullets
 
-       for (int i = 0; i < bullet.Length; i++)
+        for (int i = 0; i < bullet.Length; i++)
         {
             if (i < munition)
             {
@@ -49,6 +50,12 @@ public class Script_Munition : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.Mouse0))
         {
-            munition -= munition;
+            munition = munition -1;
         }
+       
+    if (munition <= 0)
+        {
+            SceneManager.LoadScene("SCN_GameOver");
+        }
+    }
 }
