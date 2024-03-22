@@ -5,7 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class Script_StartButton : MonoBehaviour
 {
-    public void ButtonPress()
+    public void ButtonPress2()
     {
         SceneManager.LoadScene("SCN_Final Game");
     }
