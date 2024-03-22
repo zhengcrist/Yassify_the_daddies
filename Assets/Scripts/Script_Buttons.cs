@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class Script_StartButton : MonoBehaviour
+public class Script_Buttons : MonoBehaviour
 {
     public void ButtonPress2()
     {
@@ -13,5 +13,10 @@ public class Script_StartButton : MonoBehaviour
     public void ButtonPress1()
     {
         SceneManager.LoadScene("SCN_Final Help");
+    }
+
+    public void BackButton()
+    {
+        SceneManager.LoadScene("SCN_Main Menu");
     }
 }
