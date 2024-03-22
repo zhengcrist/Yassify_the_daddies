@@ -9,4 +9,9 @@ public class Script_StartButton : MonoBehaviour
     {
         SceneManager.LoadScene("SCN_Final Game");
     }
+
+    public void ButtonPress1()
+    {
+        SceneManager.LoadScene("SCN_Final Help");
+    }
 }
