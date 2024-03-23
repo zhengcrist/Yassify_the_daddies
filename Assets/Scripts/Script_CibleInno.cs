@@ -14,6 +14,14 @@ public class Script_CibleInno : MonoBehaviour
     private Transform _targetWaypoint; // which waypoint to move to
     private int _currentWaypointIndex = 0; // to start the index of the waypoint array
 
+    // Audio
+    Script_Audio_Manager audioManager;
+
+    private void Awake()
+    {
+        audioManager = GameObject.FindGameObjectWithTag("Audio").GetComponent<Script_Audio_Manager>();
+    }
+
 
     // Start is called before the first frame update
     void Start()
@@ -55,7 +63,8 @@ public class Script_CibleInno : MonoBehaviour
 
             if (scriptScore.Score > 0)
             {
-                scriptScore.Score = scriptScore.Score - 250; // Enleve 1 a la variable score ( dans le script score) que si on as des points 
+                scriptScore.Score = scriptScore.Score - 250; // Enleve 1 a la variable score ( dans le script score) que si on as des points
+                audioManager.PlaySFX(audioManager.SFX_non);
             }
         }
     }
