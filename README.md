@@ -11,7 +11,7 @@ Click on the targets to shoot.
 --- Contributors ---
 
 Cristina ZHENG (Kyo) : tech - dev - art
-Eden GIRARDIN () : dev - tech
+Eden GIRARDIN (GloomyMage) : dev
 Jade MOREL (Barmvanic) : tech - art
 Mathias HERNANDEZ-GOMEZ (2Matcraft3r) : dev
 Mira TERRENOIRE (Mimi) : art
