@@ -35,6 +35,12 @@ public class Script_Audio_Manager : MonoBehaviour
                 musicSource.clip = Music_Game;
                 musicSource.Play();
             }
+            else if (sceneName == "SCN_GameOver")
+                {
+                    Script_Audio_Manager.instance.GetComponent<AudioSource>().Pause();
+                    musicSource.clip = Music_MainMenu;
+                    musicSource.Play();
+                }
 
             instance = this;
             DontDestroyOnLoad(gameObject);
@@ -81,6 +87,13 @@ public class Script_Audio_Manager : MonoBehaviour
             musicSource.clip = Music_Game;
             musicSource.Play();
         }
+        else if (sceneName == "SCN_GameOver")
+        {
+            Script_Audio_Manager.instance.GetComponent<AudioSource>().Pause();
+            musicSource.clip = Music_MainMenu;
+            musicSource.Play();
+        }
+
     }
 
     public void PlayMusic(AudioClip clip)
