@@ -13,13 +13,6 @@ public class Script_Munition : MonoBehaviour
     [SerializeField] public Sprite bullet_full;
     [SerializeField] public Sprite bullet_empty;
 
-    Script_Audio_Manager audioManager;
-
-    private void Awake()
-    {
-        audioManager = GameObject.FindGameObjectWithTag("Audio").GetComponent<Script_Audio_Manager>();
-    }
-
     void Update()
     {
         // bullet cannot exceed limit
@@ -57,7 +50,6 @@ public class Script_Munition : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.Mouse0))
         {
-            audioManager.PlaySFX(audioManager.SFX_bullet);
             munition = munition -1;
         }
        

@@ -14,7 +14,7 @@ public class Script_PlayerBehaviour : MonoBehaviour
 
     // [SerializeField] private float moveSpeed;
 
-    [SerializeField] Transform Fire_Position;
+    public Transform Fire_Position;
     [SerializeField] GameObject Prefab_Bullet;
 
     // Start is called before the first frame update
