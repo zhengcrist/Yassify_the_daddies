@@ -10,6 +10,8 @@ public class Script_PlayerBehaviour : MonoBehaviour
     [SerializeField] public float movingRangeX, movingRangeY;
     private float PlayerX, PlayerY;
 
+    [SerializeField] Animator Revolver_animator;
+
     // [SerializeField] private float moveSpeed;
 
     [SerializeField] Transform Fire_Position;
@@ -61,6 +63,7 @@ public class Script_PlayerBehaviour : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Mouse0))
         {
             var bullet = Instantiate(Prefab_Bullet, Fire_Position.position, Fire_Position.rotation);
+            Revolver_animator.SetTrigger("Shoot");
         }
     }
     
