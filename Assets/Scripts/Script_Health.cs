@@ -1,10 +1,12 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.Burst.CompilerServices;
 using UnityEngine;
 
 public class Script_Health : MonoBehaviour
 {
     public int currentHealth = 1;
+    Script_Score Score;
 
     public void Damage (int damageAmount)
     {
@@ -15,11 +17,13 @@ public class Script_Health : MonoBehaviour
         }
     }
 
-    public void OnMouseOver()
+  
+
+    private void OnCollisionEnter2D(Collision2D collision)
     {
-        if (Input.GetMouseButtonDown(0))
-        {
-            Damage(currentHealth);
-        }
+        // à debug lol
+        Debug.Log("Destroy Collision");
+            Destroy(collision.gameObject);
+            Destroy(this.gameObject);
     }
 }
