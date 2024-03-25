@@ -12,10 +12,10 @@ EditorBuildSettings:
     path: Assets/Scenes/SCN_Dev_Kyo.unity
     guid: 275f54b57b6049d48be35bb650859892
   - enabled: 1
-    path: Assets/Scenes/SCN_Final Game.unity
+    path: Assets/Scenes/SCN_GameOver.unity
     guid: b02308ea1094590468b45be824215c1f
   - enabled: 1
-    path: Assets/Scenes/SCN_GameOver.unity
+    path: Assets/Scenes/SCN_Final Game.unity
     guid: 99c9720ab356a0642a771bea13969a05
   - enabled: 1
     path: Assets/Scenes/SCN_Final Help.unity
