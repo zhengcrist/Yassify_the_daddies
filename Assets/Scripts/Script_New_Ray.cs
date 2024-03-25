@@ -59,8 +59,8 @@ public class Script_New_Ray : MonoBehaviour
     }
     private  IEnumerator ShotEffect()
     {
-        audioManager.PlaySFX(audioManager.SFX_bullet);
         Revolver_animator.SetTrigger("Shoot");
+        audioManager.PlaySFX(audioManager.SFX_bullet);
         yield return shotDuration;
     }
 }
