@@ -237,12 +237,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   TempEnVie: 5
-  Cible: {fileID: 6420485472005748610, guid: bfd7d01a578723d4eac5f31e0d705a04, type: 3}
-  CibleInno: {fileID: 642308900107827399, guid: c016d91cda784734db7a760373593354,
-    type: 3}
-  zoneSize: {x: 1405.32, y: 576.2}
+  Cible: {fileID: 1940449267}
+  CibleInno: {fileID: 1923469461}
+  zoneSize: {x: 1500, y: 300}
   EnnemyNb: 0
-  InnoMax: 0
+  InnoNb: 0
 --- !u!4 &120691128
 Transform:
   m_ObjectHideFlags: 0
@@ -252,7 +251,7 @@ Transform:
   m_GameObject: {fileID: 120691126}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -61, y: 65, z: -32.616787}
+  m_LocalPosition: {x: 0, y: -52, z: -32}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -314,7 +313,7 @@ Transform:
   m_GameObject: {fileID: 163060557}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -5.7900286, y: -24.727665, z: -10.248306}
+  m_LocalPosition: {x: -5.7900286, y: -24.727665, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -610,7 +609,7 @@ Transform:
   m_GameObject: {fileID: 372741997}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -25.21003, y: -24.727665, z: -10.248306}
+  m_LocalPosition: {x: -25.21003, y: -24.727665, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1895,6 +1894,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   scriptScore: {fileID: 567467419}
+  spawnZone: {fileID: 0}
+  Daddy_Arnoldy: {fileID: 0}
   _waypoints:
   - {fileID: 1013901894}
   _speed:
@@ -2814,7 +2815,7 @@ Transform:
   m_GameObject: {fileID: 1565676815}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -8.640029, y: -24.727665, z: -10.248306}
+  m_LocalPosition: {x: -8.640029, y: -24.727665, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -3091,7 +3092,7 @@ Transform:
   m_GameObject: {fileID: 1923469461}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -17.100975, y: -23.433346, z: -15.348305}
+  m_LocalPosition: {x: 0.5, y: -49, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -3159,7 +3160,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 10
-  m_Sprite: {fileID: -9095717837082945937, guid: 207ee8102dd4143d288186ef0be518ee,
+  m_Sprite: {fileID: -9095717837082945937, guid: bd3cb4af8406d4436a2ae8c2aafe1f8d,
     type: 3}
   m_Color: {r: 0.08678121, g: 0.3490566, b: 0.014818435, a: 1}
   m_FlipX: 0
@@ -3258,7 +3259,7 @@ Transform:
   m_GameObject: {fileID: 1940449267}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 772.9118, y: 5, z: 616}
+  m_LocalPosition: {x: 2319, y: 5, z: 616}
   m_LocalScale: {x: 22.622551, y: 22.622551, z: 22.622551}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -3277,6 +3278,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   scriptScore: {fileID: 567467419}
+  spawnZone: {fileID: 120691127}
+  Daddy_Arnoldy: {fileID: 21300000, guid: 9137af2b88e317c40a3fa68f16ac360d, type: 3}
   _waypoints:
   - {fileID: 338006296}
   - {fileID: 848174881}
