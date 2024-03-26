@@ -10,7 +10,7 @@ public class SpawnZone : MonoBehaviour
     [SerializeField] private GameObject CibleInno;
     [SerializeField] private Vector2 zoneSize;
     [SerializeField] public int EnnemyNb = 0;
-    [SerializeField] public int InnoMax = 0;
+    [SerializeField] public int InnoNb = 0;
 
     // Update is called once per frame
 
@@ -51,16 +51,16 @@ public class SpawnZone : MonoBehaviour
     {
 
         // if a mettre 
-        if(InnoMax <= 2)
+        if(InnoNb <= 2)
         {
             
             GameObject instantiated = Instantiate(CibleInno);
 
             instantiated.transform.position = new Vector2(
-                Random.Range(transform.position.x - zoneSize.x / 2, transform.position.x + zoneSize.x / 2 + 200),
+                Random.Range(transform.position.x - zoneSize.x / 2, transform.position.x + zoneSize.x / 2),
                 Random.Range(transform.position.y - zoneSize.y / 2 + 1500, transform.position.y + zoneSize.y / 2 + 1500)
                 );
-            InnoMax++; 
+            InnoNb++; 
             
         }
         yield return new WaitForSeconds(2f);

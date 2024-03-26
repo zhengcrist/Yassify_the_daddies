@@ -5,6 +5,8 @@ using UnityEngine;
 public class Script_Cible1 : MonoBehaviour
 {
     public Script_Score scriptScore;
+    public SpawnZone spawnZone;
+    public Sprite Daddy_Arnoldy;
 
     [SerializeField] private Transform[] _waypoints; // start the waypoints array
     [SerializeField] private float[] _speed; // speeds of the target to go to the next waypoint[same index]
@@ -60,6 +62,8 @@ public class Script_Cible1 : MonoBehaviour
         Debug.Log("Destroy Collision");
         if (collision.gameObject.CompareTag("Bullet"))
         {
+            this.gameObject.GetComponent<SpriteRenderer>().sprite = Daddy_Arnoldy;
+            spawnZone.EnnemyNb = spawnZone.EnnemyNb - 1;
             scriptScore.Score = scriptScore.Score + 1; // Rajoute 1 a la variable score ( dans le script score)
             audioManager.PlaySFX(audioManager.SFX_Meow);
             Destroy(collision.gameObject);
