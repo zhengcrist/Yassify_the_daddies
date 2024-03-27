@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
+using UnityEngine.VFX;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
@@ -17,10 +18,12 @@ public class Script_New_Ray : MonoBehaviour
     public Script_Munition Ammo;
 
     //public Script_Cible1 cible1;
+
     public int Score;
     [SerializeField] TextMeshProUGUI textScore;
 
     [SerializeField] Animator Revolver_animator;
+    public ParticleSystem popEffect;
 
     // Audio
 
@@ -57,8 +60,10 @@ public class Script_New_Ray : MonoBehaviour
 
             if (hit.collider != null)
             {
-                hit.transform.SendMessage("HitByRay");
                 Ammo.munition++;
+                hit.transform.SendMessage("HitByRay");
+                popEffect.Play();
+                Destroy(popEffect.gameObject, 5f);
             }
         }
     }

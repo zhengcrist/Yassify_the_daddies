@@ -23,8 +23,8 @@ public class Script_Cible1 : MonoBehaviour
 
 
     //Sprites
-    [SerializeField] public Sprite daddy_arnold;
-    [SerializeField] public Sprite daddy_arnoldy;
+    [SerializeField] public Sprite daddy_western;
+    [SerializeField] public Sprite daddy_yassified;
 
     // Audio
     Script_Audio_Manager audioManager;
@@ -38,7 +38,7 @@ public class Script_Cible1 : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        this.gameObject.GetComponent<SpriteRenderer>().sprite = daddy_arnold;
+        this.gameObject.GetComponent<SpriteRenderer>().sprite = daddy_western;
         _targetWaypoint = _waypoints[0];
         startPosition = transform.position;
     }
@@ -68,7 +68,7 @@ public class Script_Cible1 : MonoBehaviour
 
      private void HitByRay()
     {
-        GetComponent<SpriteRenderer>().sprite = daddy_arnoldy;
+        GetComponent<SpriteRenderer>().sprite = daddy_yassified;
         audioManager.PlaySFX(audioManager.SFX_Meow);
         Score += 100;
         Debug.Log("Score : " + Score);
