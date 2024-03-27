@@ -10,11 +10,12 @@ public class Script_New_Ray : MonoBehaviour
     public int gunDamage = 1;
 
 
-    private float fireRate = 2f;
+    private float fireRate = 2.5f;
     private WaitForSeconds shotDuration = new WaitForSeconds(0.07f);
     private float nextFire;
 
-    //SpawnZone spawnZone;
+    public Script_Munition Ammo;
+
     //public Script_Cible1 cible1;
     public int Score;
     [SerializeField] TextMeshProUGUI textScore;
@@ -33,7 +34,7 @@ public class Script_New_Ray : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+
     }
 
     // Update is called once per frame
@@ -57,6 +58,7 @@ public class Script_New_Ray : MonoBehaviour
             if (hit.collider != null)
             {
                 hit.transform.SendMessage("HitByRay");
+                Ammo.munition++;
             }
         }
     }

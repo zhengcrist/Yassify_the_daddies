@@ -73,6 +73,7 @@ public class Script_Cible1 : MonoBehaviour
         Score += 100;
         Debug.Log("Score : " + Score);
         textScore.text = Score.ToString();
+        SendMessage("Reload");
         StartCoroutine(DaddyPleaseKissMe());
     }
 
@@ -80,7 +81,7 @@ public class Script_Cible1 : MonoBehaviour
     {
         yield return new WaitForSeconds(2f);
         spawnZone.EnnemyNb--;
-        yield return new WaitForSeconds(1f);
+        yield return new WaitForSeconds(0.5f);
         Destroy(gameObject);
     }
 

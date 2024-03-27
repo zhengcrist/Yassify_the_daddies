@@ -13,10 +13,17 @@ public class Script_Munition : MonoBehaviour
     [SerializeField] public Sprite bullet_full;
     [SerializeField] public Sprite bullet_empty;
 
-    private float fireRate2 = 2f;
+    private float fireRate2 = 2.5f;
 
     private WaitForSeconds shotDuration2 = new WaitForSeconds(0.07f);
     private float nextFire2;
+
+    Script_Audio_Manager audioManager;
+
+    private void Awake()
+    {
+        audioManager = GameObject.FindGameObjectWithTag("Audio").GetComponent<Script_Audio_Manager>();
+    }
 
     void Update()
     {
@@ -66,11 +73,7 @@ public class Script_Munition : MonoBehaviour
             StartCoroutine(ShotEffect3());
             SceneManager.LoadScene("SCN_GameOver");
         }
-    }
 
-    private void Reload()
-    {
-        munition = munition + 1;
     }
 
     private IEnumerator ShotEffect2()
