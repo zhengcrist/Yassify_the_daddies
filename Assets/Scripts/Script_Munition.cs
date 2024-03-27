@@ -61,11 +61,16 @@ public class Script_Munition : MonoBehaviour
             StartCoroutine(ShotEffect2());
         }
 
-            if (munition <= 0)
+        if (munition <= 0)
         {
             StartCoroutine(ShotEffect3());
             SceneManager.LoadScene("SCN_GameOver");
         }
+    }
+
+    private void Reload()
+    {
+        munition = munition + 1;
     }
 
     private IEnumerator ShotEffect2()
@@ -77,4 +82,5 @@ public class Script_Munition : MonoBehaviour
     {
         yield return 3f;
     }
+
 }

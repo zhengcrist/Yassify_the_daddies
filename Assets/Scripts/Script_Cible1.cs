@@ -1,12 +1,12 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
+using UnityEngine.SocialPlatforms.Impl;
 
 public class Script_Cible1 : MonoBehaviour
 {
-    //public Script_Score scriptScore;
-    //public SpawnZone spawnZone;
-    //public Sprite Daddy_Arnoldy;
+    public SpawnZone spawnZone;
 
     [SerializeField] private Transform[] _waypoints; // start the waypoints array
     [SerializeField] private float[] _speed; // speeds of the target to go to the next waypoint[same index]
@@ -16,6 +16,15 @@ public class Script_Cible1 : MonoBehaviour
 
     private Transform _targetWaypoint; // which waypoint to move to
     private int _currentWaypointIndex = 0; // to start the index of the waypoint array
+
+    //
+    public int Score;
+    [SerializeField] TextMeshProUGUI textScore;
+
+
+    //Sprites
+    [SerializeField] public Sprite daddy_arnold;
+    [SerializeField] public Sprite daddy_arnoldy;
 
     // Audio
     Script_Audio_Manager audioManager;
@@ -29,6 +38,7 @@ public class Script_Cible1 : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        this.gameObject.GetComponent<SpriteRenderer>().sprite = daddy_arnold;
         _targetWaypoint = _waypoints[0];
         startPosition = transform.position;
     }
@@ -54,6 +64,24 @@ public class Script_Cible1 : MonoBehaviour
             _currentWaypointIndex = 0;
         }
         return _waypoints[_currentWaypointIndex];
+    }
+
+     private void HitByRay()
+    {
+        GetComponent<SpriteRenderer>().sprite = daddy_arnoldy;
+        audioManager.PlaySFX(audioManager.SFX_Meow);
+        Score += 100;
+        Debug.Log("Score : " + Score);
+        textScore.text = Score.ToString();
+        StartCoroutine(DaddyPleaseKissMe());
+    }
+
+    private IEnumerator DaddyPleaseKissMe()
+    {
+        yield return new WaitForSeconds(2f);
+        spawnZone.EnnemyNb--;
+        yield return new WaitForSeconds(1f);
+        Destroy(gameObject);
     }
 
 

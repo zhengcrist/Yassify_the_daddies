@@ -42,9 +42,9 @@ public class Script_New_Ray : MonoBehaviour
         Fire();
     }
 
-    private void Fire()
+    public void Fire()
     {
-        Cursor.visible = false;
+        // Cursor.visible = false;
 
         if (Input.GetKeyDown(KeyCode.Mouse0) && Time.time > nextFire)
         {
@@ -56,13 +56,7 @@ public class Script_New_Ray : MonoBehaviour
 
             if (hit.collider != null)
             {
-                audioManager.PlaySFX(audioManager.SFX_Meow);
-                Destroy(hit.collider.gameObject);
-                //this.gameObject.GetComponent<cible1.Daddy_Arnold>().sprite = cible1.Daddy_Arnoldy;
-                //spawnZone.EnnemyLess();
-                Score+=100;
-                Debug.Log("Score : " + Score);
-                textScore.text = Score.ToString();
+                hit.transform.SendMessage("HitByRay");
             }
         }
     }
@@ -71,5 +65,10 @@ public class Script_New_Ray : MonoBehaviour
         Revolver_animator.SetTrigger("Shoot");
         audioManager.PlaySFX(audioManager.SFX_bullet);
         yield return shotDuration;
+    }
+
+    private IEnumerator DaddyPleaseKissMe()
+    {
+        yield return new WaitForSeconds(1);
     }
 }
