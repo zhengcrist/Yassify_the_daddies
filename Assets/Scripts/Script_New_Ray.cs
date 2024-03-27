@@ -23,7 +23,6 @@ public class Script_New_Ray : MonoBehaviour
     [SerializeField] TextMeshProUGUI textScore;
 
     [SerializeField] Animator Revolver_animator;
-    public ParticleSystem popEffect;
 
     // Audio
 
@@ -62,8 +61,6 @@ public class Script_New_Ray : MonoBehaviour
             {
                 Ammo.munition++;
                 hit.transform.SendMessage("HitByRay");
-                popEffect.Play();
-                Destroy(popEffect.gameObject, 5f);
             }
         }
     }

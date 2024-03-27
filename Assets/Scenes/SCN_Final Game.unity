@@ -1217,7 +1217,6 @@ MonoBehaviour:
   Score: 0
   textScore: {fileID: 1390133939}
   Revolver_animator: {fileID: 0}
-  popEffect: {fileID: 0}
 --- !u!1 &588311697
 GameObject:
   m_ObjectHideFlags: 0
@@ -6449,7 +6448,6 @@ MonoBehaviour:
   Score: 0
   textScore: {fileID: 0}
   Revolver_animator: {fileID: 431567586}
-  popEffect: {fileID: 588311699}
 --- !u!1 &781206921
 GameObject:
   m_ObjectHideFlags: 0
@@ -6915,6 +6913,7 @@ MonoBehaviour:
   - 340
   - 695.8
   - 312.7
+  popEffect: {fileID: 588311699}
   Score: 0
   textScore: {fileID: 1390133939}
   daddy_western: {fileID: 21300000, guid: 7d0be43fd306f6e4182312b8fcb3b60c, type: 3}
@@ -7054,6 +7053,7 @@ MonoBehaviour:
   - {fileID: 1013901894}
   _speed:
   - 200
+  popEffect: {fileID: 588311699}
   Score: 0
   textScore: {fileID: 1390133939}
   daddy_western: {fileID: 21300000, guid: 14c01a883cc9a6647bd0e830fbd94d91, type: 3}
@@ -8515,6 +8515,7 @@ MonoBehaviour:
   - 449.1
   - 408.3
   - 369.8
+  popEffect: {fileID: 588311699}
   Score: 0
   textScore: {fileID: 1390133939}
   daddy_western: {fileID: 21300000, guid: 7d0be43fd306f6e4182312b8fcb3b60c, type: 3}
