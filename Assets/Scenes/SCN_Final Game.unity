@@ -6447,7 +6447,7 @@ MonoBehaviour:
   gunDamage: 1
   Ammo: {fileID: 1801896668}
   Score: 0
-  textScore: {fileID: 0}
+  textScore: {fileID: 1390133939}
   Revolver_animator: {fileID: 431567586}
   popEffect: {fileID: 588311699}
 --- !u!1 &781206921
