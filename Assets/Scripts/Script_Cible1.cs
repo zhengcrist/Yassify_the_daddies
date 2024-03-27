@@ -17,6 +17,8 @@ public class Script_Cible1 : MonoBehaviour
     private Transform _targetWaypoint; // which waypoint to move to
     private int _currentWaypointIndex = 0; // to start the index of the waypoint array
 
+    public ParticleSystem popEffect;
+
     //
     public int Score;
     [SerializeField] TextMeshProUGUI textScore;
@@ -70,6 +72,7 @@ public class Script_Cible1 : MonoBehaviour
     {
         GetComponent<SpriteRenderer>().sprite = daddy_yassified;
         audioManager.PlaySFX(audioManager.SFX_Meow);
+        popEffect.Play();
         Score += 100;
         Debug.Log("Score : " + Score);
         textScore.text = Score.ToString();
