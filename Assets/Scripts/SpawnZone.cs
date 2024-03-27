@@ -5,7 +5,6 @@ using UnityEngine;
 
 public class SpawnZone : MonoBehaviour
 {
-    [SerializeField] int TempEnVie = 5;
     [SerializeField] private GameObject Cible;
     [SerializeField] private GameObject CibleInno;
     [SerializeField] private Vector2 zoneSize;
@@ -47,6 +46,12 @@ public class SpawnZone : MonoBehaviour
         yield return new WaitForSeconds(2f);
         StartCoroutine(Respawn());
     }
+
+    void EnnemyLess()
+    {
+        EnnemyNb--;
+    }
+
     IEnumerator RespawnInno() // a mettre 
     {
 

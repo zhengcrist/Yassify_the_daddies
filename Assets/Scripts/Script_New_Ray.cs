@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
@@ -13,8 +14,12 @@ public class Script_New_Ray : MonoBehaviour
     private WaitForSeconds shotDuration = new WaitForSeconds(0.07f);
     private float nextFire;
 
-    [SerializeField] Animator Revolver_animator;
+    //SpawnZone spawnZone;
+    //public Script_Cible1 cible1;
+    public int Score;
+    [SerializeField] TextMeshProUGUI textScore;
 
+    [SerializeField] Animator Revolver_animator;
 
     // Audio
 
@@ -52,8 +57,12 @@ public class Script_New_Ray : MonoBehaviour
             if (hit.collider != null)
             {
                 audioManager.PlaySFX(audioManager.SFX_Meow);
-                Debug.Log("Target Position: " + hit.collider.gameObject.transform.position);
                 Destroy(hit.collider.gameObject);
+                //this.gameObject.GetComponent<cible1.Daddy_Arnold>().sprite = cible1.Daddy_Arnoldy;
+                //spawnZone.EnnemyLess();
+                Score+=100;
+                Debug.Log("Score : " + Score);
+                textScore.text = Score.ToString();
             }
         }
     }

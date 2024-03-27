@@ -11,14 +11,14 @@ public class Script_Score : MonoBehaviour
 
     // Update is called once per frame
     void Update()
-    {
-        textScore.text = Score.ToString(); // Change le texte referencer par Score : Valeur du score    
+    { 
     }
-    void ScoreFinal() // donner des medaille ou qqc suivant le score je vous laisse imaginer les  recompences
+
+    /*void ScoreFinal() // donner des medaille ou qqc suivant le score je vous laisse imaginer les  recompences
     {
         if (Score == 0)
         {
 
         }
-    }
+    }*/
 }
