@@ -44,8 +44,8 @@ public class SpawnZone : MonoBehaviour
                 GameObject instantiated = Instantiate(Cible1);
 
                 instantiated.transform.position = new Vector2(
-                    Random.Range(transform.position.x - zoneSize.x / 2, transform.position.x + zoneSize.x / 2),
-                    Random.Range(transform.position.y - zoneSize.y / 2, transform.position.y + zoneSize.y / 2)
+                    Random.Range(-zoneSize.x / 2, zoneSize.x / 2),
+                    Random.Range(-zoneSize.y / 2, +zoneSize.y / 2)
                     );
                 EnnemyNb++;
             }
@@ -54,8 +54,8 @@ public class SpawnZone : MonoBehaviour
                 GameObject instantiated = Instantiate(Cible2);
 
                 instantiated.transform.position = new Vector2(
-                    Random.Range(transform.position.x - zoneSize.x / 2, transform.position.x + zoneSize.x / 2),
-                    Random.Range(transform.position.y - zoneSize.y / 2, transform.position.y + zoneSize.y / 2)
+                    Random.Range(- zoneSize.x / 2, zoneSize.x / 2),
+                    Random.Range(- zoneSize.y / 2, + zoneSize.y / 2)
                     );
                 EnnemyNb++;
             }
@@ -64,8 +64,8 @@ public class SpawnZone : MonoBehaviour
                 GameObject instantiated = Instantiate(Cible3);
 
                 instantiated.transform.position = new Vector2(
-                    Random.Range(transform.position.x - zoneSize.x / 2, transform.position.x + zoneSize.x / 2),
-                    Random.Range(transform.position.y - zoneSize.y / 2, transform.position.y + zoneSize.y / 2)
+                    Random.Range(-zoneSize.x / 2, zoneSize.x / 2),
+                    Random.Range(-zoneSize.y / 2, +zoneSize.y / 2)
                     );
                 EnnemyNb++;
             }
@@ -89,8 +89,8 @@ public class SpawnZone : MonoBehaviour
             GameObject instantiated = Instantiate(CibleInno);
 
             instantiated.transform.position = new Vector2(
-                Random.Range(transform.position.x - zoneSize.x / 2, transform.position.x + zoneSize.x / 2),
-                Random.Range(transform.position.y - zoneSize.y / 2 + 1500, transform.position.y + zoneSize.y / 2 + 1500)
+                Random.Range(-zoneSize.x / 2, zoneSize.x / 2),
+                    Random.Range(-zoneSize.y / 2, +zoneSize.y / 2)
                 );
             InnoNb++; 
             

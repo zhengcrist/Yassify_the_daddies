@@ -7,6 +7,7 @@ using UnityEngine.SocialPlatforms.Impl;
 public class Script_CibleMomoa : MonoBehaviour
 {
     public SpawnZone spawnZone;
+    public Script_New_Ray newRay;
 
     [SerializeField] private Transform[] _waypoints; // start the waypoints array
     [SerializeField] private float[] _speed; // speeds of the target to go to the next waypoint[same index]
@@ -20,7 +21,6 @@ public class Script_CibleMomoa : MonoBehaviour
     public ParticleSystem popEffect;
 
     //
-    public int Score;
     [SerializeField] TextMeshProUGUI textScore;
 
 
@@ -73,9 +73,9 @@ public class Script_CibleMomoa : MonoBehaviour
         GetComponent<SpriteRenderer>().sprite = daddy_yassified;
         audioManager.PlaySFX(audioManager.SFX_Meow);
         popEffect.Play();
-        Score += 100;
-        Debug.Log("Score : " + Score);
-        textScore.text = Score.ToString();
+        newRay.Score += 100;
+        Debug.Log("Score : " + newRay.Score);
+        textScore.text = newRay.Score.ToString();
         SendMessage("Reload");
         StartCoroutine(DaddyPleaseKissMe());
     }

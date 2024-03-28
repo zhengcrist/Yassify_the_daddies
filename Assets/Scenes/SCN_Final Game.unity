@@ -272,7 +272,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 55, y: 0}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0, y: 1}
 --- !u!114 &104901750
@@ -295,7 +295,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 0}
+  m_Sprite: {fileID: 21300000, guid: 59fdd496698cdf446a711f03ad9bde63, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -451,7 +451,7 @@ Transform:
   m_GameObject: {fileID: 163060557}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -20, y: -150, z: 0}
+  m_LocalPosition: {x: -652, y: -150, z: -100}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -747,7 +747,7 @@ Transform:
   m_GameObject: {fileID: 372741997}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0, y: -110, z: 0}
+  m_LocalPosition: {x: -0, y: -41, z: -100}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -7016,6 +7016,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   spawnZone: {fileID: 120691127}
+  newRay: {fileID: 567467424}
   _waypoints:
   - {fileID: 626702709}
   - {fileID: 1876568247}
@@ -7208,12 +7209,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   spawnZone: {fileID: 120691127}
+  newRay: {fileID: 567467424}
   _waypoints:
   - {fileID: 1013901894}
   _speed:
   - 250
   popEffect: {fileID: 588311699}
-  Score: 0
   textScore: {fileID: 1390133939}
   daddy_western: {fileID: 21300000, guid: 14c01a883cc9a6647bd0e830fbd94d91, type: 3}
   daddy_yassified: {fileID: 21300000, guid: e09865c08cc62e64c8a54e4415fa5db8, type: 3}
@@ -7847,7 +7848,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 
+  m_text: 0
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: c7a69afc7a7757145aaecc9bed600c62, type: 2}
   m_sharedMaterial: {fileID: -3436803015697619216, guid: c7a69afc7a7757145aaecc9bed600c62,
@@ -7875,8 +7876,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 36
-  m_fontSizeBase: 36
+  m_fontSize: 20
+  m_fontSizeBase: 20
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -7941,7 +7942,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 625, y: -453}
+  m_AnchoredPosition: {x: 146, y: -178}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &1523870285
@@ -8172,7 +8173,7 @@ Transform:
   m_GameObject: {fileID: 1565676815}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 20, y: -150, z: 0}
+  m_LocalPosition: {x: 710, y: -150, z: -100}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -8204,7 +8205,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: -95.42116, y: 115.51391, z: -52.696045}
-  m_LocalScale: {x: 12.79, y: 1.8, z: 1}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1923469462}
@@ -8479,8 +8480,8 @@ Transform:
   m_GameObject: {fileID: 1923469461}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 55.1, y: -49, z: 0}
-  m_LocalScale: {x: 3, y: 18, z: 19.581877}
+  m_LocalPosition: {x: 728, y: -57.3, z: 0}
+  m_LocalScale: {x: 17.969309, y: 20.759985, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1589949508}
@@ -8498,6 +8499,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   spawnZone: {fileID: 120691127}
+  newRay: {fileID: 567467424}
   _waypoints:
   - {fileID: 163060558}
   - {fileID: 1565676816}
@@ -8506,7 +8508,9 @@ MonoBehaviour:
   - 500
   - 100
   - 300
-  popEffect: {fileID: 588311699}
+  - 300
+  - 300
+  popEffect: {fileID: 0}
   Score: 0
   textScore: {fileID: 1390133939}
   daddy_western: {fileID: 21300000, guid: 14c01a883cc9a6647bd0e830fbd94d91, type: 3}
@@ -8551,7 +8555,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 10
+  m_SortingOrder: 110
   m_Sprite: {fileID: 21300000, guid: 14c01a883cc9a6647bd0e830fbd94d91, type: 3}
   m_Color: {r: 0.022583604, g: 1, b: 0, a: 1}
   m_FlipX: 0
@@ -8595,7 +8599,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: 0.3607421, y: -0.07285893}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -8606,7 +8610,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1, y: 2}
+  m_Size: {x: 3.1163635, y: 7.349886}
   m_EdgeRadius: 0
 --- !u!1 &1940449267
 GameObject:
@@ -8655,6 +8659,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   spawnZone: {fileID: 120691127}
+  newRay: {fileID: 567467424}
   _waypoints:
   - {fileID: 338006296}
   - {fileID: 848174881}

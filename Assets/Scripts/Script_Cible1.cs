@@ -4,7 +4,7 @@ using TMPro;
 using UnityEngine;
 using UnityEngine.SocialPlatforms.Impl;
 
-public class Script_CibleCena : MonoBehaviour
+public class Script_Cible1 : MonoBehaviour
 {
     public SpawnZone spawnZone;
     public Script_New_Ray newRay;
@@ -34,7 +34,7 @@ public class Script_CibleCena : MonoBehaviour
 
     private void Awake()
     {
-        audioManager = GameObject.FindGameObjectWithTag("Audio").GetComponent<Script_Audio_Manager>();
+     audioManager = GameObject.FindGameObjectWithTag("Audio").GetComponent<Script_Audio_Manager>();
     }
 
 
@@ -69,12 +69,12 @@ public class Script_CibleCena : MonoBehaviour
         return _waypoints[_currentWaypointIndex];
     }
 
-    private void HitByRay()
+     private void HitByRay()
     {
         GetComponent<SpriteRenderer>().sprite = daddy_yassified;
         audioManager.PlaySFX(audioManager.SFX_Meow);
         popEffect.Play();
-        newRay.Score += 200;
+        newRay.Score += 100;
         Debug.Log("Score : " + newRay.Score);
         textScore.text = newRay.Score.ToString();
         SendMessage("Reload");
@@ -88,4 +88,20 @@ public class Script_CibleCena : MonoBehaviour
         yield return new WaitForSeconds(0.5f);
         Destroy(gameObject);
     }
+
+
+
+    /*private void OnCollisionEnter2D(Collision2D collision)
+    {
+        // à debug lol
+        Debug.Log("Destroy Collision");
+        if (collision.gameObject.CompareTag("Bullet"))
+        {
+            //spawnZone.EnnemyNb = spawnZone.EnnemyNb - 1;
+            //scriptScore.Score = scriptScore.Score + 1; // Rajoute 1 a la variable score ( dans le script score)
+            audioManager.PlaySFX(audioManager.SFX_Meow);
+            Destroy(collision.gameObject);
+            Destroy(this.gameObject);
+        }
+    }*/
 }
