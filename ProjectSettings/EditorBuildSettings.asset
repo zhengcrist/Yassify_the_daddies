@@ -17,4 +17,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/SCN_Final Help.unity
     guid: f4777f34054536c44992297663f5f05f
+  - enabled: 0
+    path: Assets/Scenes/SCN_Dev_Kyo.unity
+    guid: 275f54b57b6049d48be35bb650859892
+  - enabled: 0
+    path: Assets/Scenes/SCN_Dev_Mathias.unity
+    guid: 70c375eb77bc7b84089db294a1eefc50
   m_configObjects: {}
