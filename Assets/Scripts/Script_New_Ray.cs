@@ -70,9 +70,4 @@ public class Script_New_Ray : MonoBehaviour
         audioManager.PlaySFX(audioManager.SFX_bullet);
         yield return shotDuration;
     }
-
-    private IEnumerator DaddyPleaseKissMe()
-    {
-        yield return new WaitForSeconds(1);
-    }
 }

@@ -4,7 +4,7 @@ using TMPro;
 using UnityEngine;
 using UnityEngine.SocialPlatforms.Impl;
 
-public class Script_CibleInno : MonoBehaviour
+public class Script_CibleMomoa : MonoBehaviour
 {
     public SpawnZone spawnZone;
 
@@ -71,9 +71,9 @@ public class Script_CibleInno : MonoBehaviour
     private void HitByRay()
     {
         GetComponent<SpriteRenderer>().sprite = daddy_yassified;
-        audioManager.PlaySFX(audioManager.SFX_non);
+        audioManager.PlaySFX(audioManager.SFX_Meow);
         popEffect.Play();
-        Score -= 250;
+        Score += 100;
         Debug.Log("Score : " + Score);
         textScore.text = Score.ToString();
         SendMessage("Reload");

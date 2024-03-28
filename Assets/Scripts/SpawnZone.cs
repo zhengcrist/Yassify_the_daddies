@@ -5,7 +5,9 @@ using UnityEngine;
 
 public class SpawnZone : MonoBehaviour
 {
-    [SerializeField] private GameObject Cible;
+    [SerializeField] private GameObject Cible1;
+    [SerializeField] private GameObject Cible2;
+    [SerializeField] private GameObject Cible3;
     [SerializeField] private GameObject CibleInno;
     [SerializeField] private Vector2 zoneSize;
     [SerializeField] public int EnnemyNb = 0;
@@ -17,6 +19,7 @@ public class SpawnZone : MonoBehaviour
     {
         StartCoroutine(Respawn());
         StartCoroutine(RespawnInno());
+        ;
     }
     void Update()
     {
@@ -35,13 +38,37 @@ public class SpawnZone : MonoBehaviour
         //{
         if (EnnemyNb <= 2)
         {
-                GameObject instantiated = Instantiate(Cible);
+            float randomNumber = Random.Range(0, 9);
+            if (randomNumber < 5)
+            {
+                GameObject instantiated = Instantiate(Cible1);
 
                 instantiated.transform.position = new Vector2(
                     Random.Range(transform.position.x - zoneSize.x / 2, transform.position.x + zoneSize.x / 2),
                     Random.Range(transform.position.y - zoneSize.y / 2, transform.position.y + zoneSize.y / 2)
                     );
                 EnnemyNb++;
+            }
+            else if (randomNumber < 8)
+            {
+                GameObject instantiated = Instantiate(Cible2);
+
+                instantiated.transform.position = new Vector2(
+                    Random.Range(transform.position.x - zoneSize.x / 2, transform.position.x + zoneSize.x / 2),
+                    Random.Range(transform.position.y - zoneSize.y / 2, transform.position.y + zoneSize.y / 2)
+                    );
+                EnnemyNb++;
+            }
+            else
+            {
+                GameObject instantiated = Instantiate(Cible3);
+
+                instantiated.transform.position = new Vector2(
+                    Random.Range(transform.position.x - zoneSize.x / 2, transform.position.x + zoneSize.x / 2),
+                    Random.Range(transform.position.y - zoneSize.y / 2, transform.position.y + zoneSize.y / 2)
+                    );
+                EnnemyNb++;
+            }
         }
         yield return new WaitForSeconds(2f);
         StartCoroutine(Respawn());
